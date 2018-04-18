@@ -8,7 +8,7 @@ int main() {
     std::string imgName = "test.png";
     if (b.load(imgName)) {
         std::cout << "show image: " << imgName << std::endl;
-        //...change file...
+        b.resize(320, 320);
         b.save("new-test.jpg");
     }
     else
