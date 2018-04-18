@@ -16,6 +16,20 @@ bool BitmapImage::load(std::string name) {
 
 }
 
+bool BitmapImage::save(std::string name) {
+    // check it is a supported image file
+    std::string fileExt = name.substr(name.find_last_of(".") + 1);
+    if (fileExt == "jpg") {
+        // save image file
+        return true;
+    }
+    return false;
+}
+
+void BitmapImage::resize(int width, int height) {
+    //resize
+}
+
 BitmapImage::~BitmapImage() {
     delete[] buffer;
 }
