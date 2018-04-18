@@ -7,8 +7,8 @@ BitmapImage::BitmapImage() : width(640), height(480), channels(3), pixelDepth(8)
 bool BitmapImage::load(std::string name) {
     // check it is a supported image file
     std::string fileExt = name.substr(name.find_last_of(".") + 1);
-    if (fileExt == "jpg") {
-        // load image file
+    if (fileExt == "jpg" || fileExt == "png") {
+        // load image file (also from PNG)
         // decompress into buffer
         return true;
     }
